@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(252, 218, 246);
+  }
+  
+  h1 {
+    color: rgb(3, 0, 9);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 14px;
+    
+  }
+
+  .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .nav-item {
+    display: inline; 
+    margin-right: 15px; 
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .navbar li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  
+  .active {
+    background-color: #0a7981;
+  }
+
+  .section {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

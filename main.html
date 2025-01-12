@@ -1,1 +1,310 @@
-tester
+<!DOCTYPE html>
+<html>
+<!--
+What the basic tags do
+How to nest tags
+div vs. span
+How to create links
+How to embed images
+
+
+Linking to an external stylesheet (e.g., <link rel="stylesheet"...), and
+Including some rules in the .html document's head using the <style> tag
+-->
+
+
+
+
+<!--
+All HTML must start with the doc type decl
+Represents document type and helps browsers display web pages correctly
+https://www.w3schools.com/html/html_basic.asp
+-->
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grid-container-links {
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+        }
+        .grid-container-images {
+          display: grid;
+          grid-template-columns: 50% 50%;
+        }
+        .grid-container-gallary {
+          display: grid;
+          grid-template-columns: 33% 33% 33%;
+        }
+       
+        div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+        display: block;
+        }
+
+
+        div.gallery:hover {
+        border: 1px solid #777;
+        }
+
+
+        div.gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+
+        div.desc {
+        padding: 15px;
+        text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <ul class="navbar" id="navbar">
+        <li class="nav-item"><a href="#main">Announcement</a></li>
+        <li class="nav-item"><a class="active" href="#HTML">HTML</a></li>
+        <li class="nav-item"><a href="#CSS">CSS</a></li>
+
+
+    </ul>
+<!--
+Heading with h
+h1 most important
+h6 least important
+-->
+<div id="main" class="section">
+<h1>Homework 4: Exploring HTML and CSS</h1>
+
+
+<!--
+Paragraphs with p
+links start with a, then href
+-->
+<p>Welcome to my submission for Homework 4! I wanted to provide a slight PSA: I have only ever touched CSS and HTML one other time, and am therefore not very familiar with it at all. This website might not look the best. Thank you for your patience, and feel free to reach out if you have any questions or concerns! </p>
+
+
+
+
+<div id="HTML" class="section"></div>
+<h2>Exploring HTML</h2>
+    <h3> Tags and Nesting</h3>
+        <p>
+            It turns out, you can actually make tables in HTML! I made one (below) to help me remember what some of the tags mean.
+        </p>
+        <table>
+            <tr>
+              <th>Tag Definition</th>
+              <th>Meaning</th>
+            </tr>
+            <tr>
+              <td> p </td>
+              <td>paragraph</td>
+            </tr>
+            <tr>
+              <td>h</td>
+              <td>Header - the higher the number, the more important the header is (ex: h1 is more important than h4). </td>
+            </tr>
+            <tr>
+                <td> a </td>
+                <td>Hyperlink reference  - a href </td>
+              </tr>
+              <tr>
+                <td> img </td>
+                <td>images</td>
+              </tr>
+              <tr>
+                <td> table </td>
+                <td>tables, like this one! </td>
+              </tr>
+              <tr>
+                <td> tr </td>
+                <td>Nested in tables, tr is the reference for a table row </td>
+              </tr>
+              <tr>
+                <td> td </td>
+                <td>Nested in table rows (tr), td is the table data within a cell. Can contain a bunch of different types of html, like images and such.  </td>
+              </tr>
+          </table>
+
+
+          <p>
+            Some additional fun facts I learned for this homework assignment, HTML elements have default display values for simplicity. They have block elements and inline elements.
+          </p>
+          <p>
+            Block elements will take up the most available width, starts on a new line, and there is some additional padding on the margins for the element (more info can be found at <a href="https://www.w3schools.com/html/html_blocks.asp">W3Schools</a>). Inline elements do not start on a new line, and do not take up the entirety of the available width.
+          </p>
+    <div style="background-color:aliceblue;padding:25px;">
+
+
+    <h3> div VS. span</h3>
+    <h4> div</h4>
+    <p>
+        It turns out that the div element is used as a container for other HTML elements (<a href="https://www.w3schools.com/html/html_div.asp">W3Schools</a>). div is a block element, but doesn't actually have any required attributes. There are some standard attributes most people use with it though, including style, class, and id. It appears that div is mostly used to group sections of a webpage together. After learning this information, I adjusted my code with div to group this section (div vs. span) together! I used <a href="https://www.dofactory.com/html/div/style">DoFactory</a> for the style reference to learn how the style tag within div works.
+    </p>
+    <h4> span</h4>
+    <p>
+        The span tag is very similar to the div element, however it's actually an inline element, so it doesn't provide extra padding/space and doesn't use the entirety of the available width. Span seems like a good use when <span style="color:rgb(156, 6, 6)"> when you want to change the color of some text inline</span>, which is what I just learned how to do!
+    </p>
+</div>
+    <h3> Creating Links and Including Images</h3>
+    <p>
+        As you can see, I have already included several hyperlinks. However, this is only my second HTML page ever so it's absolutely worth typing up some more to get used to the syntax of HTML.
+    </p>
+    <h4> Links </h4>
+    Here are some fun links! As an added bonus, I saw a cool looking format on <a href="https://www.w3schools.com/html/html_div.asp">W3Schools</a> with a rule in the head tag using style!
+
+
+    <div class="grid-container-links">
+
+
+        <div style="background-color:#f4e574;">
+            <h5> The Technology Acquisition Website!</h5>
+            <p> Fun fact, if you ever want to see what you can purchase as a faculty member at GVSU with your department's funds, feel free to check out our stock options on our <a href="https://www.gvsu.edu/it/ta/">Technolgoy Acquisition Website</a>! </p>
+        </div>
+        <div style="background-color:#a6ff8d;">
+            <h5> My Current Favorite Video Game</h5>
+            <p> I have been attempting to 100%  <a href="https://zelda.nintendo.com/tears-of-the-kingdom/">Zelda: Tears of the Kingdom</a>. It will take me several hundred hours to do, but its good to have hobbies.</p>
+        </div>
+
+
+        <div style="background-color:#adf7e2;">
+            <h5> My Most Recent CompSci Project</h5>
+            <p> I have been working with GVSU IT Innovation and Research on a web app that generates realistic instructor content using AI called ProfAI. My project supervisor has done a few presentations about it, which can be found <a href="https://gvsuinnovate.wordpress.com/2024/09/21/it-innovation-research-and-gvsu-at-tech-week-gr-and-confluence/">here</a>. </p>
+        </div>
+
+
+        <div style="background-color:#eba3ff;">
+            <h5> My Most Recent CompSci Project</h5>
+            <p> I have been working with GVSU IT Innovation and Research on a web app that generates realistic instructor content using AI called ProfAI. I turned in my first ever MVP for the project to Dr. Erik Fredricks for 641, and a GitPages exists for more information <a href="https://tdettling.github.io/GVSU-CIS641-ProfAI/">here</a>. </p>
+        </div>
+    </div>
+
+
+    <h4> Images</h4>
+    <p>
+        I'm sure by now you must be sick of reading all of the links. Here are some nice pictures that I have been using to practice resizing using the width and height parameters, as well as the alt parameter.
+    </p>
+    <div class="grid-container-images">
+
+
+        <div style="background-color:#ffffff;">
+            <img src="images/bug_meme.jpg" alt="Girl killing a spider" width="240" height="180">
+        </div>
+        <div style="background-color:#ffffff;">
+            <img src="images/virus_meme.jpg" alt="Girl killing a spider" width="240" height="180">
+        </div>
+    </div>
+
+
+<div id="CSS" class="section">
+<h2> Exploring CSS</h2>
+    <h3> Setting Properties on an Element</h3>
+    <p>
+        So I haven't done a ton with CSS. I have really only used online templates available. I am familiar with color and font. Using <a href="https://www.w3schools.com/css/css_text_transformation.asp">W3Schools</a>, I found out you can make headers (or really any text) all caps automatically. You'll notice that my very first header (h1 header) is in all caps. That code is in my styles.css file!
+
+
+        I also conveniently changed the background of this site to pink.
+
+
+    </p>
+
+
+    <p>
+        I also learned that with CSS, my images can be put into a gallary view via <a href="https://www.w3schools.com/css/css_image_gallery.asp">W3Schools</a>. I created a new style rule for this. However, the element was inline for gallery, not block, so the list below it was overlapping. My creating, barely working solution to this was to use what I learned earlier with styling with grid, and split it into its own grid style. It doesn't look the best, but I am glad I came up with a solution.
+    </p>
+    <div class="grid-container-gallary">
+
+
+    <div class="gallery">
+        <a target="_top" href="images/cozumel_image.jpg" width="500" height="800">
+          <img src="images/cozumel_image.jpg" alt="Cinque Terre" width="500" height="800">
+        </a>
+        <div class="desc">A beautiful picture I found online of Cozumel, Mexico, which is where I went over Winter break.</div>
+      </div>
+
+
+      <div class="gallery">
+        <a target="_top" href="images/lego_statue_image.jpg">
+          <img src="images/lego_statue_image.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">A wonderful image of the best Christmas gift I have ever received - the lego set for the Statue of Liberty. </div>
+      </div>
+
+
+      <div class="gallery">
+        <a target="_top" href="images/dog_image.JPG">
+          <img src="images/dog_image.JPG" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">A stunning photo of my beloved dog, Sami. </div>
+      </div>
+     
+    </div>
+     
+    <h3> Using Selectors and Box Models</h3>
+    <h4> Types of Selecters</h4>
+        <table>
+                <tr>
+                  <th>Selector Type</th>
+                  <th>Meaning</th>
+                </tr>
+                <tr>
+                  <td> Simple </td>
+                  <td>Selects elements based on class, name, or id. ID is unique, classes use a period followed by the class name, can do more than one class as a reference. Information found <a href="https://www.w3schools.com/css/css_selectors.asp">here</a></td>
+                </tr>
+                <tr>
+                    <td> Combinator </td>
+                    <td>Explains the relationship between selectors, and contains more than one simple selector. Information found <a href="https://www.w3schools.com/css/css_combinators.asp">here</a>.</td>
+                  </tr>
+                  <tr>
+                    <td> Pseudo-Class </td>
+                    <td>Used to define when an element has or is in a "special state* (hovering state, focus, etc.). Syntax is a:state. Information found <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">here</a>.</td>
+                  </tr>
+                  <tr>
+                    <td> Pseudo-Elements </td>
+                    <td>Used for styling any specific part of an element, like a single letter or maybe the border on a picture. Notation is double colon's ::. Information found <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">here</a>. </td>
+                  </tr>
+                  <tr>
+                    <td> Attributes </td>
+                    <td>Similar to pseudo elements, only these apply to specific attributes of an element rather than generically a different part of an element. Defined by [attribute~='thing'] syntax. Information found <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">here</a>.</td>
+                  </tr>
+                <tr>
+              </table>
+            <h4> Box Models</h4>
+            <p>
+                Because I am completely new to CSS, I did not know that the term ''box model'' refers to design or layout. <a href="https://www.w3schools.com/css/css_boxmodel.asp">W3Schools</a> has this very helpful image of the box model.
+            </p>
+            <img src="images/W3_Box_Model_image.png" alt="Girl killing a spider" width="750" height="300">
+            <p>
+                The box model is basically like a giant wrapper with different parts: Margin, border, padding, and content. I am assuming there can be added attributes to it. <a href="https://www.w3schools.com/css/css_boxmodel.asp">W3Schools</a> has some fantastic descriptions of each part (below for both the assignment, and my notes).
+
+
+                <ul>
+                    <li> Content - The content of the box, where text and images appear</li>
+                    <li> Padding - Clears an area around the content. The padding is transparent</li>
+                    <li> Border - A border that goes around the padding and content</li>
+                    <li> Margin - Clears an area outside the border. The margin is transparent</li>
+                </ul>
+            </p>
+
+
+    <h3> Advanced</h3>
+    <p>
+        So, because I am new to CSS, anything outside of changing the sizing, font, or color of something is advanced to me. In a previous website I had made with HTML, I really struggled with making a navigation bar, so this new webpage is a new attempt at that. Some fun facts that I learned while making a navbar:
+        <ul>
+            <li> Navigation bars are just a list of links in HTML/CSS. </li>
+            <li> In the list, we basically remove any padding/spacing options, and remove any bullet point markers from the list.</li>
+            <li> My first mistake using WS's code is that it selected the element based on name, so instead of my pretty header, any lists that I had turned into sticky-top headers. </li>
+        </ul>
+    </p>
+    <p>
+        I ended up referencing my first webpage to fix my navbar bug. My first webpage was deployed using GitHub Pages, and the code can be found <a href="https://github.com/tdettling/GVSU-CIS641-ProfAI/blob/main/styles.css">here</a>.I used the navbar and .section portions to practice using different selectors, and because I knew that the padding portion worked. I am hoping that is okay.  
+    </p>
+</body>
+</html>
+
